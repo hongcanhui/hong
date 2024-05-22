@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火箭追剧</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        .main {
+            height: 100%;
+        }
+
+        .main {
+            background: url(./img/bg.jpg) no-repeat center/cover;
+            position: relative;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            background: rgb(102, 102, 102, 0.5);
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .header img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(102, 102, 102, 0.5);
+            color: #fff;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+
+        .mid {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        .mid>img {
+            width: 110px;
+            height: 110px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .mid p {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .mid .btn {
+            width: 200px;
+            height: 46px;
+            border-radius: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto 0;
+            border: 1px solid #e1e1e1;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .mid .btn img {
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <img src="./img/logo.jpg" alt="">
+            <span>火箭追剧</span>
+        </div>
+        <div class="mid">
+            <img src="./img/logo.jpg" alt="">
+            <p>火箭追剧 <br /> 新片热剧，想看就看</p>
+            <div id="btn" class="btn">
+                <img src="./img/android.png" alt="">
+                <span>安卓版</span>
+            </div>
+            <div id="btn1" class="btn">
+                <img src="./img/ios.png" alt="">
+                <span>苹果版</span>
+            </div>
+        </div>
+        <div class="footer">
+            联系邮箱：2939796541@qq.com
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                location.href = 'https://pinbangbang.oss-cn-hangzhou.aliyuncs.com/hjzj_929.apk'
+            }
+            document.getElementById('btn1').onclick = function () {
+                location.href = 'https://apps.apple.com/cn/app/id1322243737'
+            }
+            console.log(window.Telegram.WebApp)
+        }
+    </script>
+</body>
+
+</html>
